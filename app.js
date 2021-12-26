@@ -31,11 +31,14 @@ const book = require("./routes/book")
 const bookinstance = require("./routes/bookinstance")
 const genre = require("./routes/genre")
 
-app.use("/author", author)
-app.use("/book", book)
-app.use("/bookinstance", bookinstance)
-app.use("/genre", genre)
+app.use("/api/author", author)
+app.use("/api/book", book)
+app.use("/api/bookinstance", bookinstance)
+app.use("/api/genre", genre)
 
+// Helmet protection
+const helmet = require("helmet")
+app.use(helmet())
 
 // Client
 app.use(express.static(path.resolve(__dirname, "./client/build")))
