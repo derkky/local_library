@@ -40,6 +40,12 @@ app.use("/genre", genre)
 const helmet = require("helmet")
 app.use(helmet())
 
+// Client
+app.use(express.static(path.resolve(__dirname, "./client/build")))
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./client/build", "index.html"))
+})
+
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`)
