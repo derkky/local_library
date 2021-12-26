@@ -9,7 +9,7 @@ const Home = () => {
 
             // Should just have virtual that returns length...
             const fetchCount = async (route) => {
-                const list = await fetch(`http://localhost:3001/${route}/all`)
+                const list = await fetch(`/api/${route}/all`)
                 const listJson = await list.json()
                 const listCount = listJson.length
 

@@ -10,7 +10,7 @@ const AuthorDetail = () => {
 
     useEffect(() => {
         const getAuthorDetail = async () => {
-            const authorDetailRes = await fetch(`http://localhost:3001/author/${id}`)
+            const authorDetailRes = await fetch(`/api/author/${id}`)
             const authorDetailJson = await authorDetailRes.json()
             setAuthorDetail(authorDetailJson)
         } 
@@ -20,7 +20,7 @@ const AuthorDetail = () => {
     
     const handleDelete = () => {
         const deleteAuthor = async () => {
-            const deleteAuthorRes = await fetch(`http://localhost:3001/author/${id}/delete`, {
+            const deleteAuthorRes = await fetch(`/api/author/${id}/delete`, {
                 method: "POST"
             })
 

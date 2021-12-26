@@ -5,7 +5,7 @@ const useAuthorList = () => {
 
     useEffect(() => {
       const fetchAuthorList = async () => {
-        const authorListReq = await fetch("http://localhost:3001/author/all")
+        const authorListReq = await fetch("/api/author/all")
         const authorListJson = await authorListReq.json()
         setAuthorList(authorListJson)
       }

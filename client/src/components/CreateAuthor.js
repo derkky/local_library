@@ -37,7 +37,7 @@ const CreateAuthor = () => {
                 date_of_death: dod
             }
 
-            const createAuthorRes = await fetch("http://localhost:3001/author/create", {
+            const createAuthorRes = await fetch("/api/author/create", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(author)

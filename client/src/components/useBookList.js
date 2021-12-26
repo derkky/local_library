@@ -5,7 +5,7 @@ const useBookList = () => {
     
     useEffect( () => {
         const fetchBookList = async () => {
-            const bookListRes = await fetch("http://localhost:3001/book/all")
+            const bookListRes = await fetch("/api/book/all")
             const bookListResJson = await bookListRes.json()
 
             setBookList(bookListResJson)

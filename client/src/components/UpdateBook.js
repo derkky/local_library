@@ -57,7 +57,7 @@ const UpdateBook = () => {
         }
 
         const submitData = async () => {
-            const updateBookRes = await fetch(`http://localhost:3001/book/${bookDetail.book._id}/update`, {
+            const updateBookRes = await fetch(`/api/book/${bookDetail.book._id}/update`, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(newBook)

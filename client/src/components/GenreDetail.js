@@ -8,7 +8,7 @@ const GenreDetail = () => {
 
     useEffect(() => {
         const getGenreDetail = async () => {
-            const genreDetailsRes = await fetch(`http://localhost:3001/genre/${id}`)
+            const genreDetailsRes = await fetch(`/api/genre/${id}`)
             const genreDetailsJson = await genreDetailsRes.json()
             setGenreDetails(genreDetailsJson)
         }
@@ -18,7 +18,7 @@ const GenreDetail = () => {
 
     const handleDelete = () => {
         const deleteGenre = async () => {
-            const deleteRes = await fetch(`http://localhost:3001/genre/${id}/delete`, {
+            const deleteRes = await fetch(`/api/genre/${id}/delete`, {
                 method: "POST"
             })
             if (deleteRes.ok){

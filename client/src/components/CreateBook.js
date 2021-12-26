@@ -54,7 +54,7 @@ const CreateBook = () => {
         }
 
         const submitData = async () => {
-            const createBookRes = await fetch("http://localhost:3001/book/create", {
+            const createBookRes = await fetch("/api/book/create", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(newBook)

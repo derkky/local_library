@@ -9,7 +9,7 @@ const BookInstanceDetail = () => {
 
     useEffect(()=> {
         const fetchBookInstanceDetail = async () => {
-            const bookInstanceDetailRes = await fetch(`http://localhost:3001/bookinstance/${id}`)
+            const bookInstanceDetailRes = await fetch(`/api/bookinstance/${id}`)
             const bookInstanceDetailJson = await bookInstanceDetailRes.json()
             setBookInstanceDetail(bookInstanceDetailJson)
         }
@@ -19,7 +19,7 @@ const BookInstanceDetail = () => {
 
     const handleDelete = () => {
         const deleteBookInstance = async () => {
-            const deleteBookinstanceRes = await fetch(`http://localhost:3001/bookinstance/${id}/delete`, {
+            const deleteBookinstanceRes = await fetch(`/api/bookinstance/${id}/delete`, {
                 method: "POST"
             })
             if (deleteBookinstanceRes.ok){

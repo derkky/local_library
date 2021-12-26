@@ -41,7 +41,7 @@ const UpdateBookInstance = () => {
                 due_back: date
             }
 
-            const updateBookInstanceRes = await fetch(`http://localhost:3001/bookinstance/${bookInstanceDetail._id}/update`, {
+            const updateBookInstanceRes = await fetch(`/api/bookinstance/${bookInstanceDetail._id}/update`, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(bookInstance)

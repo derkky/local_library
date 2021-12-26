@@ -38,7 +38,7 @@ const CreateBookInstance = () => {
                 due_back: date
             }
 
-            const createBookInstanceRes = await fetch("http://localhost:3001/bookinstance/create", {
+            const createBookInstanceRes = await fetch("/api/bookinstance/create", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(bookInstance)

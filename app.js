@@ -1,6 +1,7 @@
 // Linking to database
 const mongoose = require("mongoose")
-const mongoDB = process.env.MONGODB_URI 
+require("dotenv").config()
+const mongoDB = process.env.MONGODB_URI
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true})
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"))
@@ -30,10 +31,10 @@ const book = require("./routes/book")
 const bookinstance = require("./routes/bookinstance")
 const genre = require("./routes/genre")
 
-app.use("/author", author)
-app.use("/book", book)
-app.use("/bookinstance", bookinstance)
-app.use("/genre", genre)
+app.use("/api/author", author)
+app.use("/api/book", book)
+app.use("/api/bookinstance", bookinstance)
+app.use("/api/genre", genre)
 
 // Helmet protection
 const helmet = require("helmet")
@@ -45,7 +46,7 @@ app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./client/build", "index.html"))
 })
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`)
 })

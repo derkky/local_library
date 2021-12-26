@@ -20,7 +20,7 @@ const UpdateGenre = () => {
         const newGenre = {name: genre}
 
         const submitData = async() => {
-            const res = await fetch(`http://localhost:3001/genre/${genreDetails.genre._id}/update`, {
+            const res = await fetch(`/api/genre/${genreDetails.genre._id}/update`, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(newGenre)

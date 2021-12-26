@@ -8,7 +8,7 @@ const BookDetail = () => {
 
     const handleDelete = () => {
         const deleteBook = async () => {
-            const deleteBookReq = await fetch(`http://localhost:3001/book/${id}/delete`, {
+            const deleteBookReq = await fetch(`/api/book/${id}/delete`, {
                 method: "POST"
             })
 

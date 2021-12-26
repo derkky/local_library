@@ -40,7 +40,7 @@ const UpdateAuthor = () => {
                 date_of_death: dod
             }
 
-            const updateAuthorRes = await fetch(`http://localhost:3001/author/${authorDetail.author._id}/update`, {
+            const updateAuthorRes = await fetch(`/api/author/${authorDetail.author._id}/update`, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(author)

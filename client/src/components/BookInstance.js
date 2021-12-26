@@ -6,7 +6,7 @@ const BookInstance = () => {
     
     useEffect( () => {
         const fetchBookInstanceList = async () => {
-            const bookInstanceListRes = await fetch("http://localhost:3001/bookinstance/all")
+            const bookInstanceListRes = await fetch("/api/bookinstance/all")
             const bookInstanceListResJson = await bookInstanceListRes.json()
 
             setBookInstanceList(bookInstanceListResJson)
