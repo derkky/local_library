@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 5em;
+    padding: 2em 5em 2em 2em;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sidebar-container ul {
+    list-style: none;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.home-container ul {
+    list-style: none;
+}
+
+.home-container > div {
+    margin: 0.5em;
+}
+
+.author-container, .genre-container, .book-container, .book-instance-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.author-container ul, .genre-container ul, .book-container ul, .book-instance-container ul {
+    margin-left: 1em;
+}
+
+.create-author-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.create-author-container form > div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+
+.create-book-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.create-book-container form > div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+
+.create-book-instance-container {
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.create-book-instance-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.create-book-instance-container form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-genre-container form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    gap: 0.5em;
+}
+
+.create-genre-container input{
+    width: 60vw;
+}
+
+.create-genre-container button {
+    width: 20vw;
+}
+
+.genre-detail-container, .book-detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.genre-book-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+}
+
+.book-bookinstance-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.book-bookinstance-container > div {
+    padding: 1em;
+    border-bottom-style: solid;
+}
+
+.author-detail-container, .book-instance-detail-container {
+    display:flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
