@@ -36,9 +36,6 @@ app.use("/book", book)
 app.use("/bookinstance", bookinstance)
 app.use("/genre", genre)
 
-// Helmet protection
-const helmet = require("helmet")
-app.use(helmet())
 
 // Client
 app.use(express.static(path.resolve(__dirname, "./client/build")))
